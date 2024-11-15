@@ -3,12 +3,10 @@ package modelo;
 public class Order {
     private String orderId;
     private double amount;
-    private Database database;
 
-    public Order(String orderId, double amount, Database database) {
+    public Order(String orderId, double amount) {
         this.orderId = orderId;
         this.amount = amount;
-        this.database = database;
     }
 
     public String getOrderId() {
@@ -17,11 +15,6 @@ public class Order {
 
     public double getAmount() {
         return amount;
-    }
-
-    public void saveOrder() {
-        System.out.println("Order saved in database");
-        database.guardar();
     }
 
     public String generateOrderReport() {
